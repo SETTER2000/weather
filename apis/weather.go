@@ -57,7 +57,7 @@ func (w *WeatherService) GetData(city string) (*WeatherResponse, error) {
 
 // GetWeatherURL constructs the weather url based on city and API key
 func (w *WeatherService) getURL(city string) string {
-	return fmt.Sprintf("%s?q=%s&appid=%s", WEATHER_BASE_URL, city, w.apiKey)
+	return fmt.Sprintf("%s?q=%s&lang=%s&appid=%s", WEATHER_BASE_URL, city, "ru", w.apiKey)
 }
 
 // ConvertCelsius takes a Kelvin temp and returns the Celsius number

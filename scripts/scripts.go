@@ -56,11 +56,11 @@ func weatherCallback(document dom.Document, bs *apis.BackendResponse) {
 	title := document.GetElementByID("weatherTitle").(*dom.HTMLHeadingElement)
 	title.SetTextContent(fmt.Sprintf("Weather forecast for %s", bs.CityName))
 	desc := document.GetElementByID("weatherDesc").(*dom.HTMLHeadingElement)
-	desc.SetTextContent(fmt.Sprintf("Description: %s", bs.Description))
+	desc.SetTextContent(fmt.Sprintf("Описание: %s", bs.Description))
 	temp := document.GetElementByID("weatherTemp").(*dom.HTMLHeadingElement)
-	temp.SetTextContent(fmt.Sprintf("Temperature: %s C", bs.Temp))
+	temp.SetTextContent(fmt.Sprintf("Температура: %s C", bs.Temp))
 	feelsLike := document.GetElementByID("weatherFeels").(*dom.HTMLHeadingElement)
-	feelsLike.SetTextContent(fmt.Sprintf("Feels Like: %s C", bs.FeelsLike))
+	feelsLike.SetTextContent(fmt.Sprintf("Как будто: %s C", bs.FeelsLike))
 	switch {
 	case strings.Contains(bs.Description, "clear"):
 		img := document.GetElementByID("sunImg")
