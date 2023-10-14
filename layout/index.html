@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container bg-light">
+    <h1 class="h1"> Welcome to the Go European Weather Checker!🇪🇺</h1>
+    <hr />
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="city" class="mb-2">Select a city:</label>
+        <select class="form-control" id="citiesDropdown">
+          <option value=""> </option>
+        </select>
+      </div>
+    </div>
+    <div class="container d-none" id="weatherResult">
+      <hr />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="h2" id="weatherTitle">Weather forecast for City</h2>
+            <h4 class="h4" id="weatherDesc">Description</h4>
+            <h4 class="h4" id="weatherTemp">Temp</h4>
+            <h4 class="h4" id="weatherFeels">Feels Like</h4>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img id="sunImg" src="assets/sun.png" class="rounded mx-auto d-none" style="width: 400px;" alt="clear sky">
+            <img id="cloudsImg" src="assets/clouds.png" class="rounded mx-auto d-none" style="width: 400px;" alt="clouds">
+            <img id="rainImg" src="assets/rain.png" class="rounded mx-auto d-none" style="width: 400px;" alt="rain">
+            <img id="snowImg" src="assets/snow.png" class="rounded mx-auto d-none" style="width: 400px;" alt="snow">
+            <img id="stormImg" src="assets/storm.png" class="rounded mx-auto d-none" style="width: 400px;" alt="storm">
+            <img id="mistImg" src="assets/clouds.png" class="rounded mx-auto d-none" style="width: 400px;" alt="mist">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </div>
+</body>
+
+</html>
